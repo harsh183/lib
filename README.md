@@ -18,13 +18,13 @@ shuffles all entrys of an []byte
 ## func UpArrow(base uint64, exponant uint64, upArrowAmount uint64) uint64
 executes the upArrow function (https://en.wikipedia.org/wiki/Knuth%27s_up-arrow_notation)
 
-##func GetRequestContentFromRequest(req *http.Request) map[string]interface{}
+## func GetRequestContentFromRequest(req *http.Request) map[string]interface{}
 returns the JSON from an http.Request
 
-##func GetRequestContentFromResponse(resp *http.Response) map[string]interface{}
+## func GetRequestContentFromResponse(resp *http.Response) map[string]interface{}
 returns the JSON from an http.Response
 
-##func IntRange(args ...int) <-chan int
+## func IntRange(args ...int) <-chan int
 takes 1 to 3 arguments
 for one argument :
 * IntRange(10) 
