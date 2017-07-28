@@ -20,6 +20,22 @@ func SiveOfEratosthenes(numberOfPrimes int64) []int64{
 	return returnValue
 }
 
+func IsPrime(number int64) bool{
+	if number <=1 {
+		return false
+	}
+	var i int64 = 2
+	for i*i <= number {
+		if IsPrime(i){
+			if number%i==0 {
+				return false
+			}
+		}
+		i++
+	}
+	return true
+}
+
 func filter(in <-chan int64, out chan<- int64, prime int64) {
 	for {
 		i := <-in
