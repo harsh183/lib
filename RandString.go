@@ -11,8 +11,8 @@ const charset = "abcdefghijklmnopqrstuvwxyz" +
 var seededRand = rand.New(rand.NewSource(time.Now().UnixNano()))
 
 /*RandStringWithCharset forms a string with the random seed and the charset*/
-func RandStringWithCharset(lenght int, charset string) string {
-	b := make([]byte, lenght)
+func RandStringWithCharset(length int, charset string) string {
+	b := make([]byte, length)
 	for i := range b {
 		b[i] = charset[seededRand.Intn(len(charset))]
 	}
@@ -20,6 +20,6 @@ func RandStringWithCharset(lenght int, charset string) string {
 }
 
 /*RandString returns functionCall StringWithCharset*/
-func RandString(lenght int) string {
-	return RandStringWithCharset(lenght, charset)
+func RandString(length int) string {
+	return RandStringWithCharset(length, charset)
 }
