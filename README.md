@@ -1,19 +1,39 @@
 # lib
 
-## func RandStringWithCharset(lenght int, charset string) string
-creates a random string with length and a charset (e.g. "abcdefghijklmnopqrstuvwxyz0123456789")
+## func RandStringWithCharset(length int, charset string) string
+Returns a random string with length and a charset (e.g. "abcdefghijklmnopqrstuvwxyz0123456789").
+```
+str = RandStringWithCharset(5,"abcd")
+```
+The above command will return a string of length = 5 having random characters from the set "abcd". 
 
-## func RandString(lenght int) string
-creates a random string with length and the charset ("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
+## func RandString(length int) string
+Returns a random string with length and the charset ("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789").
+```
+str = RandString(5)
+```
+The above command will return a random string of length = 5.
 
 ## func ShuffleIntSlice(slice []int)
 shuffles all entries of an `[]int`
+```
+arr:= [5]int{1,2,3,4,5}
+ShuffleIntSlice(arr[:])
+```
 
 ## func ShuffleStringSlice(slice []string)
 shuffles all entries of an `[]string`
+```
+string_arr:= [3]string{"git","rocks","hello"}
+ShuffleStringSlice(string_arr[:])
+```
 
 ## func ShuffleByteSlice(slice []byte)
 shuffles all entries of an `[]byte`
+```
+byte_arr:= [3]byte{'g','r','h'}
+ShuffleByteSlice(byte_arr[:])
+```
 
 ## func UpArrow(base uint64, exponant uint64, upArrowAmount uint64) uint64
 computes the upArrow function (https://en.wikipedia.org/wiki/Knuth%27s_up-arrow_notation)
