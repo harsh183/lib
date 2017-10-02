@@ -1,7 +1,7 @@
 package lib
 
-/*SiveOfEratosthenes returns an Slice of primenumbers smaller than the given paramter*/
-func SiveOfEratosthenes(numberOfPrimes int64) []int64{
+/*SieveOfEratosthenes returns an Slice of primenumbers smaller than the given paramter*/
+func SieveOfEratosthenes(numberOfPrimes int64) []int64{
 	ch := make(chan int64)
 	var returnValue []int64
 	go generate(ch)
